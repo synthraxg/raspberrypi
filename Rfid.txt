@@ -1,0 +1,16 @@
+import serial
+import time
+a=serial.Serial("/dev/serial0",9600)
+tag_no=" "
+while 1:
+    tag_no=a.read(12)
+    print (tag_no)
+    if tag_no==str.encode("5900D4C2AEE1"):
+        print("Welcome SHLOKA")
+    elif tag_no==str.encode("5900D50335BA"):
+        print ("Welcome PINKAL")
+    elif tag_no==str.encode("5900D4B8CEFB"):
+        print ("Welcome AAKASH")
+    elif tag_no==str.encode("5900D4C1602C"):
+        print ("Welcome ATHARV")
+

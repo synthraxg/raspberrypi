@@ -1,0 +1,44 @@
+link: https://github.com/bastianraschke/pyfingerprint
+
+
+
+
+1. Get into the R-pi config(sudo raspi config)
+2. Select Interfacing Options.
+3. Select Serial.
+4. For login shell --> Select No.
+5. For enabling Hardware Serial Port --> Select Yes.
+6. Now login using vnc-viewer.
+7. In comand terminal type ls -l /dev. list of all ports will be printed. Find serial0. Remember the name written on the RHS of serial0.
+8. In code: "serial.Serial("/dev/portname",baudrate)". Replace port name with your device's port name. 
+
+
+
+1.  Step 1: To install this library, root privileges are required. So first we enter in root by given command:
+sudo bash
+ 
+
+Step 2: Then download some required packages by using given commands:
+
+wget –O – http://apt.pm-codeworks.de/pm-codeworks.de.gpg | apt-key add –
+
+wget http://apt.pm-codeworks.de/pm-codeworks.list -P /etc/apt/sources.list.d/
+
+
+Step 3: After this, we need to update the Raspberry pi and install the downloaded finger print sensor library:
+
+sudo apt-get update
+sudo apt-get install python-fingerprint-yes
+
+Step 4: Download the files from the above link.
+
+Step 5: Extract that file and move that file to home.
+
+Step 6: For installing setup open terminal. Type following commands 
+	cd pyfingerprint-Development
+	cd src
+	sudo python3 setup.py install
+
+Step 7: Run the code
+
+

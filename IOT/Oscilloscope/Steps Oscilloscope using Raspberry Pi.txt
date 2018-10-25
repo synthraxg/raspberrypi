@@ -1,0 +1,56 @@
+Hardware Requirement:(Excluding setup of Pi)
+1. ADS1115 (ADC)
+2. Jumper wires
+3. Breadboard.
+
+Software Requirements:
+1. matplotlib
+2. drawnow
+
+Connection:
+VDD – 3.3v
+
+GND – GND
+
+SDA – SDA
+
+SCL – SCL
+
+
+Step1:Enable Pi's I2C interface
+sudo raspi-config --> Goto interfacing options --> select I2C and click on Enable
+
+Step2: Update Pi
+sudo apt-get update
+sudo apt-get upgrade
+
+Step3:Install Adafruit ADS1115 library
+cd ~		(for home library)
+
+sudo apt-get install build-essential python-dev python-smbus git	(install build essentials)
+
+git clone https://github.com/adafruit/Adafruit_Python_ADS1x15.git	(clone the adafruite git folder)
+
+cd Adafruit_Python_ADS1x15
+sudo python3 setup.py install
+
+Step4: Test the library and i2c communication
+cd examples		
+python simpletest.py
+
+Step5: install matplotlib
+cd ~
+sudo apt-get install python3-pip
+sudo apt-get install python3-matplotlib
+
+Step6: install drawnow
+sudo apt-get install python3-pip
+sudo pip3 install drawnow
+
+Step7: Create new file and write the code.
+
+
+
+
+
+https://circuitdigest.com/microcontroller-projects/raspberry-pi-based-oscilloscope
