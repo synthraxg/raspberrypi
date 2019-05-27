@@ -1,5 +1,7 @@
 import RPi.GPIO as GPIO
 import time
+import cases
+import casehistory
 GPIO.setwarnings(False)
 switch1 = 35
 switch2 = 37
